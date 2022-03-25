@@ -1,10 +1,4 @@
-const {
-    ytDonlodMp3,
-    ytDonlodMp4,
-    ytPlayMp3,
-    ytPlayMp4,
-    ytSearch
-} = require("../lib/yt");
+const { ytDonlodMp3, ytDonlodMp4, ytPlayMp3, ytPlayMp4, ytSearch } = require("../lib/yt");
 const { cekKey, limitAdd, isLimit } = require('../database/db');
 
 async function ytSearch(req, res) {
