@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { readFileTxt, readFileJson } = require('../lib/function');
-const { ytMp4, ytMp3, ytPlay } = require('../lib/youtube');
+const { ytSearch, ytPlayMp3, ytPlayMp4 } = require('../lib/youtube');
 const { cekKey, checkLimit, resetLimit } = require('../database/db'); 
 const { youtubePlay, youtubeMp4, youtubeMp3 } = require('../controllers/yt');
 const { cakLontong, bijak, quotes, fakta, ptl, motivasi } = require('../controllers/randomtext');
@@ -22,11 +22,11 @@ router.get('/checkkey', async (req, res) => {
     res.send({status: 200, apikey: apikey, limit: limit});
 });
 
-router.get('/ytplay', youtubePlay);
+router.get('/ytplay', ytSearch);
 
-router.get('/ytmp4', youtubeMp4);
+router.get('/ytmp4', ytPlayMp4);
 
-router.get('/ytmp3', youtubeMp3);
+router.get('/ytmp3', ytPlayMp3);
 
 router.get('/caklontong', cakLontong);
 
