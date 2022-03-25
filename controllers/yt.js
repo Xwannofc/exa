@@ -1,7 +1,7 @@
-const { ytDonlodMp3, ytDonlodMp4, ytPlayMp3, ytPlayMp4, ytSearch } = require("../lib/yt");
+const { ytDonlodMp3, ytDonlodMp4, ytPlayMp3, ytPlayMp4, yts } = require("../lib/yt");
 const { cekKey, limitAdd, isLimit } = require('../database/db');
 
-async function ytSearch(req, res) {
+async function yts(req, res) {
     const query = req.query.query;
     const apikey = req.query.apikey;
     if (query === undefined || apikey === undefined) return res.status(404).send({
