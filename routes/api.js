@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { readFileTxt, readFileJson } = require('../lib/function');
-const { ytSearch, ytPlayMp3, ytPlayMp4 } = require('../lib/youtube');
+const { ytSearch, ytPlayMp3, ytPlayMp4 } = require('../lib/yt');
 const { cekKey, checkLimit, resetLimit } = require('../database/db'); 
 const { youtubePlay, youtubeMp4, youtubeMp3 } = require('../controllers/yt');
 const { cakLontong, bijak, quotes, fakta, ptl, motivasi } = require('../controllers/randomtext');
